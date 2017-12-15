@@ -47,10 +47,12 @@ public class DataUtil {
         em.getTransaction().begin();
         em.createNativeQuery("DELETE FROM a___e").executeUpdate();
         em.createNativeQuery("DELETE FROM a___b").executeUpdate();
+        em.createNativeQuery("DELETE FROM a___b2").executeUpdate();
         em.createQuery("DELETE FROM A").executeUpdate();
         em.createQuery("DELETE FROM B").executeUpdate();
         em.getTransaction().commit();
         em.close();
         emf.close();
     }
+
 }
