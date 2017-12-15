@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+    <persistence-unit name="NewPersistenceUnit">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:postgresql://127.0.0.1:5433/play"/>
+            <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
+            <property name="hibernate.connection.username" value="postgres"/>
+            <property name="hibernate.connection.password" value="circus16"/>
+            <property name="hibernate.archive.autodetection" value="class"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hbm2ddl.auto" value="update"/>
+            <property name="javax.persistence.schema-generation.database.action" value="none"/>
+            <!--<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>-->
+            <!--hibernate.integrator_provider doesnt work here. Need to specify it in code-->
+            <!--<property name="hibernate.integrator_provider" value="core.hibernateMetadata.MetadataExtractorIntegratorProvider"/>-->
+            <!--<property name="hibernate.integrator_provider" value="core.hibernateMetadata.MetadataExtractorIntegrator"/>-->
+        </properties>
+    </persistence-unit>
+</persistence>
